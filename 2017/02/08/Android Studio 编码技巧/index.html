@@ -1,0 +1,910 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhsp's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android studio编码技巧">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/Android Studio 编码技巧/index.html">
+<meta property="og:site_name" content="zhsp&#39;s blog">
+<meta property="og:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-03-24T02:29:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android studio编码技巧">
+<meta name="twitter:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/"/>
+
+
+
+
+
+  <title> Android studio编码技巧 | zhsp's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f703bb59e5ff1d156f1696d818668598";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhsp's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zhsp23">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="zhsp's blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="zhsp's blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android studio编码技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T17:30:00+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/08/Android Studio 编码技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Android Studio 编码技巧/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><p> <strong>1.0 搜索or查看</strong></p>
+<ul>
+<li><p><code>Ctrl+G</code>  跳到指定的行</p>
+</li>
+<li><p><code>Ctrl+Shift+R</code>  在选中的文件目录里替换</p>
+</li>
+<li><p><code>Ctrl+Shift+F</code>  在选中的文件目录里搜索</p>
+</li>
+<li><p><code>Ctrl+N</code>  查找类</p>
+</li>
+<li><p><code>Ctrl+Shift+N</code>  查找文件</p>
+</li>
+<li><p><code>F2 或Shift+F2</code>  高亮错误或警告快速定位</p>
+<a id="more"></a>
+</li>
+<li><p><code>Alt＋Q</code> 可以看到当前方法的声明</p>
+</li>
+<li><p><code>Ctrl＋P</code>  可以显示参数信息</p>
+</li>
+<li><p><code>ctrl+tab标签</code>  查看最近的操作</p>
+</li>
+<li><p><code>ctrl+e</code>  查看最近访问的文件</p>
+</li>
+<li><p><code>ctrl+alt+home</code> 查看相关文件</p>
+</li>
+<li><p><code>alt+f1</code>  在项目文件或资源管理器中打开该文件</p>
+</li>
+<li><p><code>ctrl+f12</code> 当前文件结构</p>
+</li>
+<li><p><code>ctrl+Q</code>  显示方法的注释</p>
+</li>
+<li><p><code>ctrl+h</code>  查看类结构</p>
+</li>
+<li><p><code>ctrl+shift+i</code>  快速查看方法的具体实现</p>
+</li>
+<li><p><code>ctrl+shift+E</code>  查看最近修改的类</p>
+</li>
+<li><p><code>ctrl+b</code>  查看一个变量的声明</p>
+</li>
+</ul>
+<p><strong>2.0  重构</strong></p>
+<ul>
+<li><p><code>Ctrl＋Alt＋V</code>  可以引入变量。例如把括号内的SQL赋成一个变量</p>
+</li>
+<li><p><code>ctrl+alt+v</code> 生成变量</p>
+</li>
+<li><p><code>ctrl+alt+n</code> 反向提取（合并）</p>
+</li>
+<li><p><code>ctrl+shift+j</code>  合并文本行</p>
+</li>
+<li><p><code>ctlr+alt+m</code>  抽取代码块成为方法</p>
+</li>
+<li><p><code>ctrl+alt+p</code> 将当前值作为当前方法的一个参数</p>
+</li>
+<li><p><code>shift+f6</code> 重名包、类、文件、方法名、变量名等等</p>
+</li>
+<li><p><code>ctrl+shift+delete</code> 移除包裹代码</p>
+</li>
+</ul>
+<p><a href="http://www.open-open.com/lib/view/open1454166356120.html" target="_blank" rel="noopener">更多重构技巧</a></p>
+<p><strong>3.0  快捷操作</strong></p>
+<ul>
+<li><p><code>Ctrl+Alt+O</code>  优化导入的类和包</p>
+</li>
+<li><p><code>Ctrl＋Alt＋T</code>  可以把代码包在一块内，例如try/catch</p>
+</li>
+<li><p><code>Shift＋Click</code> 可以关闭文件</p>
+</li>
+<li><p><code>Alt＋Up and Alt＋Down</code> 可在方法间快速移动</p>
+</li>
+<li><p><code>Ctrl+1</code>  切换工程视图</p>
+</li>
+<li><p><code>Alt+Insert</code>  创建构造方法</p>
+</li>
+<li><p><code>Ctrl+O</code>  选择创建未实现的方法</p>
+</li>
+<li><p><code>alt+1</code> 快速打开工程面板</p>
+</li>
+<li><p><code>ctrl+shift+f12</code> 隐藏所有面板</p>
+</li>
+<li><p><code>f12</code> 回到上一个工具</p>
+</li>
+<li><p><code>ctrl+U</code>  定位到父类</p>
+</li>
+<li><p><code>alt+数字</code> 打开关闭有数字标记的面板</p>
+</li>
+<li><p><code>ctrl+W</code> 扩大选择</p>
+</li>
+<li><p><code>alt+J</code> 多处选择</p>
+</li>
+<li><p><code>Ctrl+Alt+Space</code> 类名或接口名提示</p>
+</li>
+<li><p><code>ctlr+shift+Enter</code></p>
+<ol>
+<li>为行末添加一个分号，即使光标不在行末;</li>
+<li>为if,while,for语句生成小括号和大括号;</li>
+<li>方法声明后添加大括号</li>
+<li>如果一个语句已经补全，你使用该快捷键后会之间跳导下一行去，即使光标不在最后;</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p><code>alt+Enter+check regexp</code>  帮助编写正则表达式</p>
+</li>
+<li><p><code>altr+shift+up/down</code> 代码上下移动</p>
+</li>
+<li><p><code>ctrl+shift+up/down</code> 函数上下移动</p>
+</li>
+<li><p><code>Object.for/Object.cast</code>在代码后边加上<code>.xxx</code>可以生成例如for循环之类的模板。具体的<br>可以在editor → Postfix Completion中查看所有的代码补全后缀</p>
+</li>
+<li><p><code>ctrl+shift+↑↓</code> 代码换行</p>
+</li>
+<li><p><code>ctrl+[或]</code>  跳到大括号的开头或者结尾</p>
+</li>
+</ul>
+<p><strong>4.0 版本控制</strong></p>
+<ul>
+<li><p><code>alt+&#39;</code> 版本控制弹窗</p>
+</li>
+<li><p><code>Alt+Shift+C</code> 对比最近修改的代码</p>
+</li>
+</ul>
+<p><strong>5.0 技巧</strong></p>
+<ul>
+<li><p><code>ctrl+shift+A</code>  快速查找并打开某个操作</p>
+<ul>
+<li><p><code>ctrl+j</code>  查看动态模板</p>
+</li>
+<li><p>操作名称 Analyze Data Flow to Here 查看数据变量的向下传递过程</p>
+</li>
+<li><p>操作名称 Attach to Android Process 快速进入调试模式</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="zhsp23 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="zhsp23 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/08/Webview拍照或从相册上传图片处理总结/" rel="next" title="关于Webview拍照或从相册上传图片处理总结">
+                <i class="fa fa-chevron-left"></i> 关于Webview拍照或从相册上传图片处理总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/08/第2章 常用互动方法/" rel="prev" title="第2章 常用互动方法">
+                第2章 常用互动方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/08/Android Studio 编码技巧/"
+           data-title="Android studio编码技巧" data-url="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head.jpg"
+               alt="zhsp23" />
+          <p class="site-author-name" itemprop="name">zhsp23</p>
+          <p class="site-description motion-element" itemprop="description">When you want to succeed as bad as you want to breathe, then you'll be successful.</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用快捷键"><span class="nav-number">1.</span> <span class="nav-text">常用快捷键</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhsp23</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhsp23"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhsp's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="【译】构建 Android App 的30条宝贵经验做任何事都有两种人，一种是自己很努力去做的，还一种是听从他人意见建议做的。这里有我一些总结的经验，希望能帮到你们：  导入任何第三方包的时候都要再三思考，因为这个动作责任重大。  不要去绘制用户看不见的地方。  再三考虑数据库的使用对业务是不是必要的。  65535问题很快就会遇到，这里可以助你渡劫。  替代异步任务最好的东西是RxJava，没有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="构建 Android App 的30条宝贵经验">
+<meta property="og:url" content="http://yoursite.com/2017/03/23/【译】构建 Android App 的30条宝贵经验/index.html">
+<meta property="og:site_name" content="zhsp&#39;s blog">
+<meta property="og:description" content="【译】构建 Android App 的30条宝贵经验做任何事都有两种人，一种是自己很努力去做的，还一种是听从他人意见建议做的。这里有我一些总结的经验，希望能帮到你们：  导入任何第三方包的时候都要再三思考，因为这个动作责任重大。  不要去绘制用户看不见的地方。  再三考虑数据库的使用对业务是不是必要的。  65535问题很快就会遇到，这里可以助你渡劫。  替代异步任务最好的东西是RxJava，没有">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-03-24T03:19:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="构建 Android App 的30条宝贵经验">
+<meta name="twitter:description" content="【译】构建 Android App 的30条宝贵经验做任何事都有两种人，一种是自己很努力去做的，还一种是听从他人意见建议做的。这里有我一些总结的经验，希望能帮到你们：  导入任何第三方包的时候都要再三思考，因为这个动作责任重大。  不要去绘制用户看不见的地方。  再三考虑数据库的使用对业务是不是必要的。  65535问题很快就会遇到，这里可以助你渡劫。  替代异步任务最好的东西是RxJava，没有">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/23/【译】构建 Android App 的30条宝贵经验/"/>
+
+
+
+
+
+  <title> 构建 Android App 的30条宝贵经验 | zhsp's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f703bb59e5ff1d156f1696d818668598";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhsp's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/【译】构建 Android App 的30条宝贵经验/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zhsp23">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="zhsp's blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="zhsp's blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                构建 Android App 的30条宝贵经验
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T09:30:00+08:00">
+                2017-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/23/【译】构建 Android App 的30条宝贵经验/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/【译】构建 Android App 的30条宝贵经验/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="【译】构建-Android-App-的30条宝贵经验"><a href="#【译】构建-Android-App-的30条宝贵经验" class="headerlink" title="【译】构建 Android App 的30条宝贵经验"></a>【译】构建 Android App 的30条宝贵经验</h1><p>做任何事都有两种人，一种是自己很努力去做的，还一种是听从他人意见建议做的。这里有我一些总结的经验，希望能帮到你们：</p>
+<ul>
+<li><p>导入任何第三方包的时候都要再三思考，因为这个动作<strong>责任</strong>重大。</p>
+</li>
+<li><p><a href="http://riggaroo.co.za/optimizing-layouts-in-android-reducing-overdraw/" target="_blank" rel="noopener">不要去绘制用户看不见的地方</a>。</p>
+</li>
+<li><p><strong>再三考虑</strong>数据库的使用对业务是不是必要的。</p>
+</li>
+<li><p><code>65535</code>问题很快就会遇到，<a href="https://medium.com/@rotxed/dex-skys-the-limit-no-65k-methods-is-28e6cb40cf71#.ook785i7j" target="_blank" rel="noopener">这里</a>可以助你渡劫。</p>
+</li>
+<li><p>替代<a href="https://medium.com/swlh/party-tricks-with-rxjava-rxandroid-retrolambda-1b06ed7cd29c#.cw2c751gf" target="_blank" rel="noopener">异步任务</a>最好的东西是<code>RxJava</code>，没有之一。</p>
+<a id="more"></a>
+</li>
+<li><p><a href="http://square.github.io/retrofit/" target="_blank" rel="noopener">Retrofit</a>是目前最好的网络请求框架。</p>
+</li>
+<li><p>可以使用<a href="https://android.jlelse.eu/retrolambda-on-android-191cc8151f85#.27omjkgum" target="_blank" rel="noopener">Retrolambda</a>来简化你的代码。</p>
+</li>
+<li><p><a href="https://medium.com/swlh/party-tricks-with-rxjava-rxandroid-retrolambda-1b06ed7cd29c#.w97b058pe" target="_blank" rel="noopener">RxJava+Retrofit+Retrolambda</a>组合起来使用简直不能更爽。</p>
+</li>
+<li><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">EventBus</a>是个很好的消息总线库，我也用它，但是我<strong>不会过于依赖</strong>，因为大量使用这货会导致你的代码<strong>艰涩难懂，逻辑凌乱不堪</strong>，请<strong>慎用</strong>这货，包括<code>RxBus</code>。</p>
+</li>
+<li><p><a href="https://medium.com/@cesarmcferreira/package-by-features-not-layers-2d076df1964d#.phormee79" target="_blank" rel="noopener">分包按功能特点分，不要按业务层分</a>。</p>
+</li>
+<li><p>主线程不要做耗时操作。</p>
+</li>
+<li><p>使用<a href="https://developer.android.com/studio/write/lint.html" target="_blank" rel="noopener">lint</a>可以帮助你优化布局和布局层次，减少一些无必要的布局or控件。</p>
+</li>
+<li><p>如果你使用<code>Gradle</code>，那么尽可能去<a href="https://android.jlelse.eu/speeding-up-gradle-builds-619c442113cb#.svga2houv" target="_blank" rel="noopener">加速编译</a>。</p>
+</li>
+<li><p>开启<a href="https://android.jlelse.eu/speeding-up-gradle-builds-619c442113cb#.n4jpczxpq" target="_blank" rel="noopener">编译报告</a>，看看编译过程中的耗时统计。</p>
+</li>
+<li><p>在架构上尽量采用<a href="https://fernandocejas.com/2015/07/18/architecting-android-the-evolution/" target="_blank" rel="noopener">大众化</a>的。</p>
+</li>
+<li><p><a href="http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort/67500#67500" target="_blank" rel="noopener">测试是虽然费事费时，但是相比不要测试而言，你解决Bug的时候会更快，代码也更具健壮性。</a></p>
+</li>
+<li><p>使用<a href="https://fernandocejas.com/2015/04/11/tasting-dagger-2-on-android/" target="_blank" rel="noopener">依赖注入</a>能让你的app更模块化更好测试。</p>
+</li>
+<li><p>订阅<a href="http://fragmentedpodcast.com/" target="_blank" rel="noopener">这个网站</a>的内容对你大有裨益。</p>
+</li>
+<li><p><a href="https://www.reddit.com/r/Android/comments/2hywu9/google_play_only_one_strike_is_needed_to_ruin_you/" target="_blank" rel="noopener">坚决不要使用个人邮箱作为应用商店平台的账户，当然也包括一些第三方服务提供商。</a></p>
+</li>
+<li><p>在使用<code>EditText</code>时，使用<a href="https://developer.android.com/training/keyboard-input/style.html" target="_blank" rel="noopener">合适的</a>输入类型。</p>
+</li>
+<li><p>使用 <code>Android Studio -&gt; Analyze</code> 去分析和定位bug。</p>
+</li>
+<li><p>经常关注一些比较新的技术和<a href="https://android-arsenal.com/" target="_blank" rel="noopener">库</a>。例如<a href="https://github.com/cesarferreira/dryrun" target="_blank" rel="noopener">dryrun</a>这个库可以帮你减少构建远程仓库项目的时间。PS：我自己就在用，简直不能更爽。</p>
+</li>
+<li><p><code>Service</code>只做它应该做的，并且在需要它销毁的时候尽快能销毁。</p>
+</li>
+<li><p>使用<a href="https://developer.android.com/reference/android/accounts/AccountManager.html" target="_blank" rel="noopener">AccountManager</a>针对用户名和邮箱啥的提供建议。</p>
+</li>
+<li><p>使用<code>CI (Continuous Integration)</code>来构建和描述自己的beta版以及正式版apk。</p>
+</li>
+<li><p>不要运行自己的<code>CI</code>服务器，维护服务器很耗时，因为将有<code>磁盘空间/安全问题/更新服务器以防止SSL攻击</code>等等各种柴犬二哈问题在等着你。使用<code>circleci</code>，<code>travis</code>或<code>shippable</code>，它们便宜并且让你少操心。</p>
+</li>
+<li><p><a href="https://github.com/Triple-T/gradle-play-publisher" target="_blank" rel="noopener">发布app的时候可以使用自动部署。</a></p>
+</li>
+<li><p>你需要导入某个库，但是这个库特别大，而你只需要其中一小部分功能，那么你应该去找个更小的，更符合自己的库（<a href="https://developer.android.com/studio/build/shrink-code.html" target="_blank" rel="noopener">proguard</a>可以压缩资源）。</p>
+</li>
+<li><p>不要依赖导入过多的<code>modules</code>除非你真的需要。因为过多的<code>modules</code>会导致构建变慢(CI就是个例子)，这比起直接使用二进制的<code>.jar/.aar</code>来说要慢4倍左右。</p>
+</li>
+<li><p>可以考虑将<code>.PNG</code>替换成<code>.SVG</code>了。</p>
+</li>
+<li><p>library中抽象类能比较便捷的控制和替换使用场景（例如：<code>AppLogger.d(“message”)</code> 中包括了 <code>Log.d(TAG, message)</code>并且还能优化成 <code>Timber.d(message)</code>）。</p>
+</li>
+<li><p>监控网络连接和连接的类型你会发现-&gt;<code>wifi</code>连接下可能刷新数据更频繁。</p>
+</li>
+<li><p>监控电量和电池你会发现-&gt;充电时候数据可能更新更频繁，低电量的时候数据更新很慢。</p>
+</li>
+<li><p><strong>用户交互界面就是个笑话，除非你能讲解出来，否则它绝对不够好。</strong></p>
+</li>
+<li><p><a href="https://twitter.com/danlew42/status/677151453476032512" target="_blank" rel="noopener">测试非常适合于性能上的调优：慢慢地（但正确）写一些实现，然后验证优化并且也不会破坏测试。</a></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="zhsp23 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="zhsp23 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/09/android5.0和6.0新特性/" rel="next" title="android5.0和6.0新特性">
+                <i class="fa fa-chevron-left"></i> android5.0和6.0新特性
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/31/一步一步深入理解CoordinatorLayout/" rel="prev" title="一步一步深入理解CoordinatorLayout">
+                一步一步深入理解CoordinatorLayout <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/23/【译】构建 Android App 的30条宝贵经验/"
+           data-title="构建 Android App 的30条宝贵经验" data-url="http://yoursite.com/2017/03/23/【译】构建 Android App 的30条宝贵经验/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head.jpg"
+               alt="zhsp23" />
+          <p class="site-author-name" itemprop="name">zhsp23</p>
+          <p class="site-description motion-element" itemprop="description">When you want to succeed as bad as you want to breathe, then you'll be successful.</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【译】构建-Android-App-的30条宝贵经验"><span class="nav-number">1.</span> <span class="nav-text">【译】构建 Android App 的30条宝贵经验</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhsp23</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhsp23"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
