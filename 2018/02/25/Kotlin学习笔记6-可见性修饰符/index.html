@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta name="description" content="可见性修饰符Kotlin中这些修饰符是与我们Java中的使用是有些不同的。在这个语言中默认的修饰符是 public ，这节约了很多的时间和字符。但是这里有一个详细的解释关于在Kotlin中不同的可见性修饰符是怎么工作的。 修饰符privateprivate 是我们使用的最限制的修饰符。它表示只能被自己所在的文件可见，所以如果给一个类生命为private，就不能在定义这个类之外的文件使用它。 另一方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android studio编码技巧">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Android Studio 编码技巧/index.html">
+<meta property="og:title" content="Kotlin学习笔记6-可见性修饰符">
+<meta property="og:url" content="http://yoursite.com/2018/02/25/Kotlin学习笔记6-可见性修饰符/index.html">
 <meta property="og:site_name" content="zhsp&#39;s blog">
-<meta property="og:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta property="og:description" content="可见性修饰符Kotlin中这些修饰符是与我们Java中的使用是有些不同的。在这个语言中默认的修饰符是 public ，这节约了很多的时间和字符。但是这里有一个详细的解释关于在Kotlin中不同的可见性修饰符是怎么工作的。 修饰符privateprivate 是我们使用的最限制的修饰符。它表示只能被自己所在的文件可见，所以如果给一个类生命为private，就不能在定义这个类之外的文件使用它。 另一方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-24T02:29:02.000Z">
+<meta property="og:updated_time" content="2018-04-18T07:44:20.874Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android studio编码技巧">
-<meta name="twitter:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta name="twitter:title" content="Kotlin学习笔记6-可见性修饰符">
+<meta name="twitter:description" content="可见性修饰符Kotlin中这些修饰符是与我们Java中的使用是有些不同的。在这个语言中默认的修饰符是 public ，这节约了很多的时间和字符。但是这里有一个详细的解释关于在Kotlin中不同的可见性修饰符是怎么工作的。 修饰符privateprivate 是我们使用的最限制的修饰符。它表示只能被自己所在的文件可见，所以如果给一个类生命为private，就不能在定义这个类之外的文件使用它。 另一方">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/25/Kotlin学习笔记6-可见性修饰符/"/>
 
 
 
 
 
-  <title> Android studio编码技巧 | zhsp's blog </title>
+  <title> Kotlin学习笔记6-可见性修饰符 | zhsp's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/Kotlin学习笔记6-可见性修饰符/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zhsp23">
@@ -294,7 +294,7 @@
             
             
               
-                Android studio编码技巧
+                Kotlin学习笔记6-可见性修饰符
               
             
           </h1>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T17:30:00+08:00">
-                2017-02-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T17:30:00+08:00">
+                2018-02-25
               </time>
             
 
@@ -332,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/android/" itemprop="url" rel="index">
-                    <span itemprop="name">android</span>
+                  <a href="/categories/Kotlin-android/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin_android</span>
                   </a>
                 </span>
 
@@ -350,8 +350,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Android Studio 编码技巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Android Studio 编码技巧/" itemprop="commentCount"></span>
+                <a href="/2018/02/25/Kotlin学习笔记6-可见性修饰符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/25/Kotlin学习笔记6-可见性修饰符/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -377,141 +377,25 @@
       
 
       
-        <h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><p> <strong>1.0 搜索or查看</strong></p>
-<ul>
-<li><p><code>Ctrl+G</code>  跳到指定的行</p>
-</li>
-<li><p><code>Ctrl+Shift+R</code>  在选中的文件目录里替换</p>
-</li>
-<li><p><code>Ctrl+Shift+F</code>  在选中的文件目录里搜索</p>
-</li>
-<li><p><code>Ctrl+N</code>  查找类</p>
-</li>
-<li><p><code>Ctrl+Shift+N</code>  查找文件</p>
-</li>
-<li><p><code>F2 或Shift+F2</code>  高亮错误或警告快速定位</p>
-<a id="more"></a>
-</li>
-<li><p><code>Alt＋Q</code> 可以看到当前方法的声明</p>
-</li>
-<li><p><code>Ctrl＋P</code>  可以显示参数信息</p>
-</li>
-<li><p><code>ctrl+tab标签</code>  查看最近的操作</p>
-</li>
-<li><p><code>ctrl+e</code>  查看最近访问的文件</p>
-</li>
-<li><p><code>ctrl+alt+home</code> 查看相关文件</p>
-</li>
-<li><p><code>alt+f1</code>  在项目文件或资源管理器中打开该文件</p>
-</li>
-<li><p><code>ctrl+f12</code> 当前文件结构</p>
-</li>
-<li><p><code>ctrl+Q</code>  显示方法的注释</p>
-</li>
-<li><p><code>ctrl+h</code>  查看类结构</p>
-</li>
-<li><p><code>ctrl+shift+i</code>  快速查看方法的具体实现</p>
-</li>
-<li><p><code>ctrl+shift+E</code>  查看最近修改的类</p>
-</li>
-<li><p><code>ctrl+b</code>  查看一个变量的声明</p>
-</li>
-</ul>
-<p><strong>2.0  重构</strong></p>
-<ul>
-<li><p><code>Ctrl＋Alt＋V</code>  可以引入变量。例如把括号内的SQL赋成一个变量</p>
-</li>
-<li><p><code>ctrl+alt+v</code> 生成变量</p>
-</li>
-<li><p><code>ctrl+alt+n</code> 反向提取（合并）</p>
-</li>
-<li><p><code>ctrl+shift+j</code>  合并文本行</p>
-</li>
-<li><p><code>ctlr+alt+m</code>  抽取代码块成为方法</p>
-</li>
-<li><p><code>ctrl+alt+p</code> 将当前值作为当前方法的一个参数</p>
-</li>
-<li><p><code>shift+f6</code> 重名包、类、文件、方法名、变量名等等</p>
-</li>
-<li><p><code>ctrl+shift+delete</code> 移除包裹代码</p>
-</li>
-</ul>
-<p><a href="http://www.open-open.com/lib/view/open1454166356120.html" target="_blank" rel="noopener">更多重构技巧</a></p>
-<p><strong>3.0  快捷操作</strong></p>
-<ul>
-<li><p><code>Ctrl+Alt+O</code>  优化导入的类和包</p>
-</li>
-<li><p><code>Ctrl＋Alt＋T</code>  可以把代码包在一块内，例如try/catch</p>
-</li>
-<li><p><code>Shift＋Click</code> 可以关闭文件</p>
-</li>
-<li><p><code>Alt＋Up and Alt＋Down</code> 可在方法间快速移动</p>
-</li>
-<li><p><code>Ctrl+1</code>  切换工程视图</p>
-</li>
-<li><p><code>Alt+Insert</code>  创建构造方法</p>
-</li>
-<li><p><code>Ctrl+O</code>  选择创建未实现的方法</p>
-</li>
-<li><p><code>alt+1</code> 快速打开工程面板</p>
-</li>
-<li><p><code>ctrl+shift+f12</code> 隐藏所有面板</p>
-</li>
-<li><p><code>f12</code> 回到上一个工具</p>
-</li>
-<li><p><code>ctrl+U</code>  定位到父类</p>
-</li>
-<li><p><code>alt+数字</code> 打开关闭有数字标记的面板</p>
-</li>
-<li><p><code>ctrl+W</code> 扩大选择</p>
-</li>
-<li><p><code>alt+J</code> 多处选择</p>
-</li>
-<li><p><code>Ctrl+Alt+Space</code> 类名或接口名提示</p>
-</li>
-<li><p><code>ctlr+shift+Enter</code></p>
-<ol>
-<li>为行末添加一个分号，即使光标不在行末;</li>
-<li>为if,while,for语句生成小括号和大括号;</li>
-<li>方法声明后添加大括号</li>
-<li>如果一个语句已经补全，你使用该快捷键后会之间跳导下一行去，即使光标不在最后;</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p><code>alt+Enter+check regexp</code>  帮助编写正则表达式</p>
-</li>
-<li><p><code>altr+shift+up/down</code> 代码上下移动</p>
-</li>
-<li><p><code>ctrl+shift+up/down</code> 函数上下移动</p>
-</li>
-<li><p><code>Object.for/Object.cast</code>在代码后边加上<code>.xxx</code>可以生成例如for循环之类的模板。具体的<br>可以在editor → Postfix Completion中查看所有的代码补全后缀</p>
-</li>
-<li><p><code>ctrl+shift+↑↓</code> 代码换行</p>
-</li>
-<li><p><code>ctrl+[或]</code>  跳到大括号的开头或者结尾</p>
-</li>
-</ul>
-<p><strong>4.0 版本控制</strong></p>
-<ul>
-<li><p><code>alt+&#39;</code> 版本控制弹窗</p>
-</li>
-<li><p><code>Alt+Shift+C</code> 对比最近修改的代码</p>
-</li>
-</ul>
-<p><strong>5.0 技巧</strong></p>
-<ul>
-<li><p><code>ctrl+shift+A</code>  快速查找并打开某个操作</p>
-<ul>
-<li><p><code>ctrl+j</code>  查看动态模板</p>
-</li>
-<li><p>操作名称 Analyze Data Flow to Here 查看数据变量的向下传递过程</p>
-</li>
-<li><p>操作名称 Attach to Android Process 快速进入调试模式</p>
-</li>
-</ul>
-</li>
-</ul>
+        <h1 id="可见性修饰符"><a href="#可见性修饰符" class="headerlink" title="可见性修饰符"></a>可见性修饰符</h1><p>Kotlin中这些修饰符是与我们Java中的使用是有些不同的。在这个语言中默认的修饰符是 <strong>public</strong> ，这节约了很多的时间和字符。但是这里有一个详细的解释关于在Kotlin中不同的可见性修饰符是怎么工作的。</p>
+<h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><h3 id="private"><a href="#private" class="headerlink" title="private"></a>private</h3><p>private 是我们使用的最限制的修饰符。它表示只能被自己所在的文件可见，所以如果给一个类生命为private，就不能在定义这个类之外的文件使用它。</p>
+<p>另一方面，如果在一个类类面使用了private 修饰符，那访问权限就被限制在这个类里面。甚至继承这个类的子类也不能使用它。</p>
+<p>所以一等公民，类、对象、接口。。。。。。（也就是包成员）如果被定义为private，那么它们只会被定义所在的文件可见。如果被定义在了类或者接口中，那么它们只对这个类或者这个接口可见。</p>
+<h3 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h3><p>这个修饰符只能用在类或者接口中的成员上。一个包成员不能被定义为 protected 。定义在一个成员中，它就与java中的方式一样了：它可以被成员自己和继承它的成员可见（比如，类和它的子类）</p>
+  <a id="more"></a>
+<h3 id="internal"><a href="#internal" class="headerlink" title="internal"></a>internal</h3><p>如果是一个定位为 internal 的包成员的话，对所在的整个 model 可见。如果它是一个其他领域的成员，它就需要依赖那个领域的可见性。比如：一个类被定义为 private , 那么它的 internal 修饰的函数的可见性就会限制与它所在的这个类的可见性了。</p>
+<p>我们可以访问 module 中的 internal 修饰的类，但是不能访问其它 module 的。</p>
+<blockquote>
+<p>什么是module</p>
+<blockquote>
+<p>根据Jetbrains的定义，一个 module 应该是一个单独的功能性的单位，它应该是可以被单独编译、运行、测试、debug的。根据我们项目不同的模块，可以在Android Studio中创建不同的 module 。在Eclipse中，这些 module 可以认为是在一个 workspace 中的不同的 project 。</p>
+</blockquote>
+</blockquote>
+<h3 id="public"><a href="#public" class="headerlink" title="public"></a>public</h3><p>这是最没有限制的修饰符，并且是默认的修饰符，成员在任何地方被修饰为 public ，很明显它只局限与它的领域。一个定义为 public 的成员被包含在一个修饰为private的类中，这个成员在这个类外也是不可见的。</p>
+<h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><p>所有构造函数默认都是 public 的，它们类是可见的，可以被其他地方使用。也可以使用这个语法来把构造函数修饰为 private ：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class c private constructor(a: Int) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>在Kotlin中，我们不需要去指定一个函数的返回值类型，它可以让编译器推断出来。</strong> 举个省略返回值类型的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data <span class="class"><span class="keyword">class</span> <span class="title">ForecastList</span>(...) </span>&#123;</span><br><span class="line">  fun get(position: Int) = daliyForecast[position]</span><br><span class="line">  fun size() = daliyForecast.size()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -563,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/android api指南/" rel="next" title="android api指南">
-                <i class="fa fa-chevron-left"></i> android api指南
+              <a href="/2018/02/23/Kotlin学习笔记5-Lambdas/" rel="next" title="Kotlin学习笔记5-Lambdas">
+                <i class="fa fa-chevron-left"></i> Kotlin学习笔记5-Lambdas
               </a>
             
           </div>
@@ -573,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/09/android5.0和6.0新特性/" rel="prev" title="android5.0和6.0新特性">
-                android5.0和6.0新特性 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/26/Kotlin学习笔记7-Kotlin Android Extensions/" rel="prev" title="Kotlin学习笔记7-Kotlin Android Extensions">
+                Kotlin学习笔记7-Kotlin Android Extensions <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,8 +508,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Android Studio 编码技巧/"
-           data-title="Android studio编码技巧" data-url="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+      <div class="ds-thread" data-thread-key="2018/02/25/Kotlin学习笔记6-可见性修饰符/"
+           data-title="Kotlin学习笔记6-可见性修饰符" data-url="http://yoursite.com/2018/02/25/Kotlin学习笔记6-可见性修饰符/">
       </div>
     
   </div>
@@ -732,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用快捷键"><span class="nav-number">1.</span> <span class="nav-text">常用快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可见性修饰符"><span class="nav-number">1.</span> <span class="nav-text">可见性修饰符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修饰符"><span class="nav-number">1.1.</span> <span class="nav-text">修饰符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#private"><span class="nav-number">1.1.1.</span> <span class="nav-text">private</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#protected"><span class="nav-number">1.1.2.</span> <span class="nav-text">protected</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#internal"><span class="nav-number">1.1.3.</span> <span class="nav-text">internal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#public"><span class="nav-number">1.1.4.</span> <span class="nav-text">public</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造器"><span class="nav-number">1.2.</span> <span class="nav-text">构造器</span></a></li></ol></li></ol></div>
             
 
           </div>

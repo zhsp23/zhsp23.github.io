@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta name="description" content="操作符重载操作符表一元操作符   操作符 函数     +a a.unaryPlus()   -a a.unaryMinus()   !a a.not()   a++ a.inc()   a– a.dec()    二元操作符   操作符 函数     a + b a.plus(b)   a - b a.minus(b)   a * b a.times(b)   a / b a.div(b)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android studio编码技巧">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Android Studio 编码技巧/index.html">
+<meta property="og:title" content="Kotlin学习笔记4-操作符">
+<meta property="og:url" content="http://yoursite.com/2018/02/21/Kotlin学习笔记4-操作符/index.html">
 <meta property="og:site_name" content="zhsp&#39;s blog">
-<meta property="og:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta property="og:description" content="操作符重载操作符表一元操作符   操作符 函数     +a a.unaryPlus()   -a a.unaryMinus()   !a a.not()   a++ a.inc()   a– a.dec()    二元操作符   操作符 函数     a + b a.plus(b)   a - b a.minus(b)   a * b a.times(b)   a / b a.div(b)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-24T02:29:02.000Z">
+<meta property="og:updated_time" content="2018-04-18T07:43:19.810Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android studio编码技巧">
-<meta name="twitter:description" content="常用快捷键 1.0 搜索or查看  Ctrl+G  跳到指定的行  Ctrl+Shift+R  在选中的文件目录里替换  Ctrl+Shift+F  在选中的文件目录里搜索  Ctrl+N  查找类  Ctrl+Shift+N  查找文件  F2 或Shift+F2  高亮错误或警告快速定位">
+<meta name="twitter:title" content="Kotlin学习笔记4-操作符">
+<meta name="twitter:description" content="操作符重载操作符表一元操作符   操作符 函数     +a a.unaryPlus()   -a a.unaryMinus()   !a a.not()   a++ a.inc()   a– a.dec()    二元操作符   操作符 函数     a + b a.plus(b)   a - b a.minus(b)   a * b a.times(b)   a / b a.div(b)">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/21/Kotlin学习笔记4-操作符/"/>
 
 
 
 
 
-  <title> Android studio编码技巧 | zhsp's blog </title>
+  <title> Kotlin学习笔记4-操作符 | zhsp's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/21/Kotlin学习笔记4-操作符/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zhsp23">
@@ -294,7 +294,7 @@
             
             
               
-                Android studio编码技巧
+                Kotlin学习笔记4-操作符
               
             
           </h1>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T17:30:00+08:00">
-                2017-02-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-21T17:30:00+08:00">
+                2018-02-21
               </time>
             
 
@@ -332,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/android/" itemprop="url" rel="index">
-                    <span itemprop="name">android</span>
+                  <a href="/categories/Kotlin-android/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin_android</span>
                   </a>
                 </span>
 
@@ -350,8 +350,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Android Studio 编码技巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Android Studio 编码技巧/" itemprop="commentCount"></span>
+                <a href="/2018/02/21/Kotlin学习笔记4-操作符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/21/Kotlin学习笔记4-操作符/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -377,141 +377,176 @@
       
 
       
-        <h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><p> <strong>1.0 搜索or查看</strong></p>
-<ul>
-<li><p><code>Ctrl+G</code>  跳到指定的行</p>
-</li>
-<li><p><code>Ctrl+Shift+R</code>  在选中的文件目录里替换</p>
-</li>
-<li><p><code>Ctrl+Shift+F</code>  在选中的文件目录里搜索</p>
-</li>
-<li><p><code>Ctrl+N</code>  查找类</p>
-</li>
-<li><p><code>Ctrl+Shift+N</code>  查找文件</p>
-</li>
-<li><p><code>F2 或Shift+F2</code>  高亮错误或警告快速定位</p>
-<a id="more"></a>
-</li>
-<li><p><code>Alt＋Q</code> 可以看到当前方法的声明</p>
-</li>
-<li><p><code>Ctrl＋P</code>  可以显示参数信息</p>
-</li>
-<li><p><code>ctrl+tab标签</code>  查看最近的操作</p>
-</li>
-<li><p><code>ctrl+e</code>  查看最近访问的文件</p>
-</li>
-<li><p><code>ctrl+alt+home</code> 查看相关文件</p>
-</li>
-<li><p><code>alt+f1</code>  在项目文件或资源管理器中打开该文件</p>
-</li>
-<li><p><code>ctrl+f12</code> 当前文件结构</p>
-</li>
-<li><p><code>ctrl+Q</code>  显示方法的注释</p>
-</li>
-<li><p><code>ctrl+h</code>  查看类结构</p>
-</li>
-<li><p><code>ctrl+shift+i</code>  快速查看方法的具体实现</p>
-</li>
-<li><p><code>ctrl+shift+E</code>  查看最近修改的类</p>
-</li>
-<li><p><code>ctrl+b</code>  查看一个变量的声明</p>
-</li>
-</ul>
-<p><strong>2.0  重构</strong></p>
-<ul>
-<li><p><code>Ctrl＋Alt＋V</code>  可以引入变量。例如把括号内的SQL赋成一个变量</p>
-</li>
-<li><p><code>ctrl+alt+v</code> 生成变量</p>
-</li>
-<li><p><code>ctrl+alt+n</code> 反向提取（合并）</p>
-</li>
-<li><p><code>ctrl+shift+j</code>  合并文本行</p>
-</li>
-<li><p><code>ctlr+alt+m</code>  抽取代码块成为方法</p>
-</li>
-<li><p><code>ctrl+alt+p</code> 将当前值作为当前方法的一个参数</p>
-</li>
-<li><p><code>shift+f6</code> 重名包、类、文件、方法名、变量名等等</p>
-</li>
-<li><p><code>ctrl+shift+delete</code> 移除包裹代码</p>
-</li>
-</ul>
-<p><a href="http://www.open-open.com/lib/view/open1454166356120.html" target="_blank" rel="noopener">更多重构技巧</a></p>
-<p><strong>3.0  快捷操作</strong></p>
-<ul>
-<li><p><code>Ctrl+Alt+O</code>  优化导入的类和包</p>
-</li>
-<li><p><code>Ctrl＋Alt＋T</code>  可以把代码包在一块内，例如try/catch</p>
-</li>
-<li><p><code>Shift＋Click</code> 可以关闭文件</p>
-</li>
-<li><p><code>Alt＋Up and Alt＋Down</code> 可在方法间快速移动</p>
-</li>
-<li><p><code>Ctrl+1</code>  切换工程视图</p>
-</li>
-<li><p><code>Alt+Insert</code>  创建构造方法</p>
-</li>
-<li><p><code>Ctrl+O</code>  选择创建未实现的方法</p>
-</li>
-<li><p><code>alt+1</code> 快速打开工程面板</p>
-</li>
-<li><p><code>ctrl+shift+f12</code> 隐藏所有面板</p>
-</li>
-<li><p><code>f12</code> 回到上一个工具</p>
-</li>
-<li><p><code>ctrl+U</code>  定位到父类</p>
-</li>
-<li><p><code>alt+数字</code> 打开关闭有数字标记的面板</p>
-</li>
-<li><p><code>ctrl+W</code> 扩大选择</p>
-</li>
-<li><p><code>alt+J</code> 多处选择</p>
-</li>
-<li><p><code>Ctrl+Alt+Space</code> 类名或接口名提示</p>
-</li>
-<li><p><code>ctlr+shift+Enter</code></p>
-<ol>
-<li>为行末添加一个分号，即使光标不在行末;</li>
-<li>为if,while,for语句生成小括号和大括号;</li>
-<li>方法声明后添加大括号</li>
-<li>如果一个语句已经补全，你使用该快捷键后会之间跳导下一行去，即使光标不在最后;</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p><code>alt+Enter+check regexp</code>  帮助编写正则表达式</p>
-</li>
-<li><p><code>altr+shift+up/down</code> 代码上下移动</p>
-</li>
-<li><p><code>ctrl+shift+up/down</code> 函数上下移动</p>
-</li>
-<li><p><code>Object.for/Object.cast</code>在代码后边加上<code>.xxx</code>可以生成例如for循环之类的模板。具体的<br>可以在editor → Postfix Completion中查看所有的代码补全后缀</p>
-</li>
-<li><p><code>ctrl+shift+↑↓</code> 代码换行</p>
-</li>
-<li><p><code>ctrl+[或]</code>  跳到大括号的开头或者结尾</p>
-</li>
-</ul>
-<p><strong>4.0 版本控制</strong></p>
-<ul>
-<li><p><code>alt+&#39;</code> 版本控制弹窗</p>
-</li>
-<li><p><code>Alt+Shift+C</code> 对比最近修改的代码</p>
-</li>
-</ul>
-<p><strong>5.0 技巧</strong></p>
-<ul>
-<li><p><code>ctrl+shift+A</code>  快速查找并打开某个操作</p>
-<ul>
-<li><p><code>ctrl+j</code>  查看动态模板</p>
-</li>
-<li><p>操作名称 Analyze Data Flow to Here 查看数据变量的向下传递过程</p>
-</li>
-<li><p>操作名称 Attach to Android Process 快速进入调试模式</p>
-</li>
-</ul>
-</li>
-</ul>
+        <h1 id="操作符重载"><a href="#操作符重载" class="headerlink" title="操作符重载"></a>操作符重载</h1><h2 id="操作符表"><a href="#操作符表" class="headerlink" title="操作符表"></a>操作符表</h2><h3 id="一元操作符"><a href="#一元操作符" class="headerlink" title="一元操作符"></a>一元操作符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+a</td>
+<td style="text-align:center">a.unaryPlus()</td>
+</tr>
+<tr>
+<td style="text-align:center">-a</td>
+<td style="text-align:center">a.unaryMinus()</td>
+</tr>
+<tr>
+<td style="text-align:center">!a</td>
+<td style="text-align:center">a.not()</td>
+</tr>
+<tr>
+<td style="text-align:center">a++</td>
+<td style="text-align:center">a.inc()</td>
+</tr>
+<tr>
+<td style="text-align:center">a–</td>
+<td style="text-align:center">a.dec()</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二元操作符"><a href="#二元操作符" class="headerlink" title="二元操作符"></a>二元操作符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a + b</td>
+<td style="text-align:center">a.plus(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a - b</td>
+<td style="text-align:center">a.minus(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a * b</td>
+<td style="text-align:center">a.times(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a / b</td>
+<td style="text-align:center">a.div(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a % b</td>
+<td style="text-align:center">a.mod(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a in b</td>
+<td style="text-align:center">a.contains(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a..b</td>
+<td style="text-align:center">a.rangTo(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a !in b</td>
+<td style="text-align:center">!a.contains(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a += b</td>
+<td style="text-align:center">a.plusAssign(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a -= b</td>
+<td style="text-align:center">a.minusAssign(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a *= b</td>
+<td style="text-align:center">a.timesAssign(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a /= b</td>
+<td style="text-align:center">a.divAssign(b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a %= n</td>
+<td style="text-align:center">a.modAssign(b)</td>
+</tr>
+</tbody>
+</table>
+  <a id="more"></a>
+<h3 id="数组操作符"><a href="#数组操作符" class="headerlink" title="数组操作符"></a>数组操作符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a[i]</td>
+<td style="text-align:center">a.get(i)</td>
+</tr>
+<tr>
+<td style="text-align:center">a[i,j]</td>
+<td style="text-align:center">a.get(i,j)</td>
+</tr>
+<tr>
+<td style="text-align:center">a[i_1,…,i_n]</td>
+<td style="text-align:center">a.get(i_1,…,i_n)</td>
+</tr>
+<tr>
+<td style="text-align:center">a[i] = b</td>
+<td style="text-align:center">a.set(i, b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a[i,j] = b</td>
+<td style="text-align:center">a.set(i, j, b)</td>
+</tr>
+<tr>
+<td style="text-align:center">a[i_1,…,i_n] = b</td>
+<td style="text-align:center">a.set(i_1, …, i_n, b)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="等于操作符"><a href="#等于操作符" class="headerlink" title="等于操作符"></a>等于操作符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a == b</td>
+<td style="text-align:center">a?.equals(b)?:b === null</td>
+</tr>
+<tr>
+<td style="text-align:center">a != b</td>
+<td style="text-align:center">!(a?.equals(b)?:b === null)</td>
+</tr>
+</tbody>
+</table>
+<p>相等操作符有一点不同，为了打倒正确合适的相等检查做了更复杂的转换，因为要得到一个确切的函数机构比较，<br>不仅仅是指定的名称。方法必须要如下准确的被实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">operate fun equals(other: Any?): boolean</span><br></pre></td></tr></table></figure>
+<p>操组符 <strong>===</strong> 和 <strong>!==</strong> 用来做身份检查（它们分别是java中的 <strong>==</strong> 和 <strong>!=</strong>）,并且不能被重载</p>
+<h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">调用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a(i)</td>
+<td style="text-align:center">a.invoke(i)</td>
+</tr>
+<tr>
+<td style="text-align:center">a(i, j)</td>
+<td style="text-align:center">a.invoke(i, j)</td>
+</tr>
+<tr>
+<td style="text-align:center">a(i_1, …, i_n)</td>
+<td style="text-align:center">a.invoke(i_1, …, i_n)</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -563,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/android api指南/" rel="next" title="android api指南">
-                <i class="fa fa-chevron-left"></i> android api指南
+              <a href="/2018/02/20/Kotlin学习笔记3-数据类/" rel="next" title="Kotlin学习笔记3-数据类">
+                <i class="fa fa-chevron-left"></i> Kotlin学习笔记3-数据类
               </a>
             
           </div>
@@ -573,8 +608,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/09/android5.0和6.0新特性/" rel="prev" title="android5.0和6.0新特性">
-                android5.0和6.0新特性 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/23/Kotlin学习笔记5-Lambdas/" rel="prev" title="Kotlin学习笔记5-Lambdas">
+                Kotlin学习笔记5-Lambdas <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,8 +659,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Android Studio 编码技巧/"
-           data-title="Android studio编码技巧" data-url="http://yoursite.com/2017/02/08/Android Studio 编码技巧/">
+      <div class="ds-thread" data-thread-key="2018/02/21/Kotlin学习笔记4-操作符/"
+           data-title="Kotlin学习笔记4-操作符" data-url="http://yoursite.com/2018/02/21/Kotlin学习笔记4-操作符/">
       </div>
     
   </div>
@@ -732,7 +767,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用快捷键"><span class="nav-number">1.</span> <span class="nav-text">常用快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作符重载"><span class="nav-number">1.</span> <span class="nav-text">操作符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作符表"><span class="nav-number">1.1.</span> <span class="nav-text">操作符表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一元操作符"><span class="nav-number">1.1.1.</span> <span class="nav-text">一元操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二元操作符"><span class="nav-number">1.1.2.</span> <span class="nav-text">二元操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作符"><span class="nav-number">1.1.3.</span> <span class="nav-text">数组操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等于操作符"><span class="nav-number">1.1.4.</span> <span class="nav-text">等于操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数调用"><span class="nav-number">1.1.5.</span> <span class="nav-text">函数调用</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
